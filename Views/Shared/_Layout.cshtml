@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewData["Title"] - BY-Yazılım Todo</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" asp-controller="Todo" asp-action="Index">BY-Yazılım Todo</a>
+        <div>
+            <form id="logoutForm" asp-controller="Account" asp-action="Logout" method="post" class="d-inline">
+                @Html.AntiForgeryToken()
+                <button type="submit" class="btn btn-outline-light">Çıkış Yap</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    @RenderBody()
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+@RenderSection("Scripts", required: false)
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+/* Genel sayfa ayarları */
+html {
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+body {
+    margin: 0;
+    margin-bottom: 60px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    color: #000;
+    -webkit-font-smoothing: antialiased;
+    background: #B0654D;
+    overflow-x: hidden;
+}
+
+/* Responsive font büyüklüğü */
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 580px) {
+    body {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+/* Wrapper */
+.wrapper {
+    margin: 0 auto;
+    padding: 40px;
+    max-width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+/* Form Container */
+.form-container {
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+.form-container table {
+    width: 100%;
+    margin: 0 auto;
+    border-collapse: separate;
+    border-spacing: 0 15px;
+}
+
+.form-container td:first-child {
+    text-align: center;
+    padding-right: 15px;
+    width: 130px;
+    font-weight: 600;
+    vertical-align: middle;
+}
+
+.form-container td:last-child {
+    text-align: left;
+}
+
+.form-container input[type="text"],
+.form-container textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    resize: vertical;
+}
+
+.form-container textarea#Description {
+    height: 100px;
+    max-width: 100%;
+    min-width: 100%;
+}
+
+/* Ekle butonu */
+.form-container button[type="submit"] {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #258cfb;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-container button[type="submit"]:hover {
+    background-color: #106cd1;
+}
+
+/* Tablo stil */
+.table {
+    margin: 0 0 40px 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+    display: table;
+    background-color: transparent;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.row {
+    display: table-row;
+    background: #f6f6f6;
+}
+
+.row:nth-of-type(odd) {
+    background: #e9e9e9;
+}
+
+.row.header {
+    font-weight: 900;
+    color: #fff;
+    background: #ea6153;
+}
+
+.cell {
+    display: table-cell;
+    padding: 10px;
+    vertical-align: top; /* İçerik üstten hizalansın */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    border: 1px solid #ddd;
+    width: auto;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.cell:last-child {
+    text-align: center;
+}
+
+/* Açıklama hücresine özel stil */
+.cell[data-title="Açıklama"] {
+    white-space: normal; /* Satır kaydırmayı aktif et */
+    max-width: 400px;    /* Maksimum genişlik */
+    font-family: monospace;
+}
+
+/* Status container ve butonlar */
+.status-container {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.status-btn {
+    padding: 5px 10px;
+    min-width: 80px;
+    text-align: center;
+    white-space: nowrap;
+    box-sizing: border-box;
+}
+
+.btn-group {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+/* Buton genişliklerini eşitle */
+.btn-group .btn {
+    min-width: 40px;
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* Buton renkleri */
+.btn-info {
+    background-color: #258cfb;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    width: 40px;
+}
+
+.btn-info:hover {
+    background-color: #106cd1;
+}
+
+.btn-secondary {
+    background-color: #aaa;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.btn-secondary:hover {
+    background-color: #888;
+}
+
+/* Responsive: küçük ekran */
+@media (max-width: 580px) {
+    .table {
+        display: block;
+    }
+
+    .row {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .row.header .cell {
+        display: none;
+    }
+
+    .cell {
+        display: block;
+        width: auto;
+        margin-bottom: 10px;
+        border: none;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .cell::before {
+        content: attr(data-title);
+        font-weight: bold;
+        color: #969696;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .status-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .status-btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .status-btn:last-child {
+        margin-bottom: 0;
+    }
+
+    .btn-group {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-group .btn {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .btn-group .btn:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.center-screen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Tam ekran yüksekliği */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.form-container {
+    max-width: 600px;
+    width: 100%;
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.form-container table {
+    margin: 0 auto; /* Tabloyu ortala */
+}
+
+.form-container td {
+    text-align: center !important; /* Hücreleri ortaya hizala */
+}
+
+.form-container td:first-child {
+    text-align: right !important; /* Label sütununu sağa hizala */
+    padding-right: 10px;
+    width: 130px;
+}
+
+
