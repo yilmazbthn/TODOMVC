@@ -1,4 +1,5 @@
 # TodoMVC - ASP.NET Core Identity Uygulaması
+**Canlı Demo İçin
 
 Bu proje, **ASP.NET Core MVC**, **Entity Framework Core** ve **Identity** kullanarak geliştirilmiş bir Todo uygulamasıdır. Kullanıcılar kayıt olabilir,
 giriş yapabilir, todo ekleyebilir, güncelleyebilir ve silebilir. Her işlem sonrası kullanıcıya e-posta bildirimi gönderilmektedir. 
@@ -17,6 +18,7 @@ Ayrıca **Google reCAPTCHA v3** doğrulaması ile bot aktiviteleri önlenmiştir
   - Todo eklendi
   - Todo güncellendi
   - Todo silindi
+  - Şifre Değiştirildi
 - Google reCAPTCHA v3 doğrulama
 - Role tabanlı yetkilendirme hazır (IdentityRole)
 - Responsive ve basit tasarım
@@ -33,7 +35,6 @@ Ayrıca **Google reCAPTCHA v3** doğrulaması ile bot aktiviteleri önlenmiştir
 - Razor View Engine
 - Bootstrap 5 (Frontend)
 - Google reCAPTCHA v3
-
 ---
 
 ## Kurulum
