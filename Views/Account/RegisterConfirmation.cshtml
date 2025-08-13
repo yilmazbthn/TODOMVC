@@ -1,0 +1,10 @@
+@{
+    ViewData["Title"] = "Kayıt Onayı";
+}
+
+<div class="container mt-5" style="max-width: 500px; margin: 0 auto; text-align: center;">
+    <h2>@ViewData["Title"]</h2>
+    <p>Hesabınız başarıyla oluşturuldu! ✅</p>
+    <p>Lütfen e-posta kutunuzu kontrol edin ve gönderilen link ile mailinizi doğrulayın.</p>
+    <a asp-controller="Account" asp-action="Login" class="btn btn-primary mt-3">Giriş Yap</a>
+</div>

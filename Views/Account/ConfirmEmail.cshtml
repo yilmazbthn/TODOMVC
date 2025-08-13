@@ -1,0 +1,11 @@
+@{
+    ViewData["Title"] = "Email Doğrulama";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<div class="alert alert-success mt-3">
+    Tebrikler! Email adresiniz başarıyla doğrulandı. Artık sisteme giriş yapabilirsiniz.
+</div>
+
+<a asp-controller="Account" asp-action="Login" class="btn btn-primary mt-3">Giriş Yap</a>

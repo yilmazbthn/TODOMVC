@@ -5,11 +5,11 @@ namespace TodoMVC.Models;
 
 public class LoginViewModel
 {
-    [Required]
+    [Required(ErrorMessage = "E-posta alanı boş olamaz.")]
     [EmailAddress]
     public string Email { get; set; }
 
-    [Required]
+    [Required(ErrorMessage = "Şifre alanı boş olamaz.")]
     [DataType(DataType.Password)]
     public string Password { get; set; }
 }
